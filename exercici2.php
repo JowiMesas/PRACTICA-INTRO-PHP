@@ -7,7 +7,7 @@
 
  */
 $num1 = 3;
-
+echo"Dia: $num1 <br>";
 switch ($num1) {
     case 1:
         echo"Lunes";

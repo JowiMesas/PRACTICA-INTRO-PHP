@@ -1,6 +1,8 @@
 <?php
 $num1 = 5;
 $num2 = 10;
+echo"$num1 <br>";
+echo"$num2 <br>";
  //Operaciones
  $suma = $num1 + $num2;
  $resta = $num1 - $num2;
