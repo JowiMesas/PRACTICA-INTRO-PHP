@@ -6,7 +6,7 @@
  * con ningún día. 
 
  */
-$num1 = 3;
+$num1 = rand(1,7);
 echo"Dia: $num1 <br>";
 switch ($num1) {
     case 1:
