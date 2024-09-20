@@ -31,4 +31,4 @@ case 6:
     echo "Su cara opuesta es 2";
     break;
 
-}
+} 
