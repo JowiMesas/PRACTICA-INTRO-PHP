@@ -1,11 +1,9 @@
 <?php
-/**
- * 1. Se declara una variable con un valor numérico. UƟlizando una estructura switch/case
- * genera un mensaje que indique a qué día de la semana se corresponde.
- * a. En caso de que no sea un valor entre el 1 y el 7 indica que no se corresponde
- * con ningún día. 
-
- */
+echo "1. Se declara una variable con un valor numérico. UƟlizando una estructura switch/case 
+genera un mensaje que indique a qué día de la semana se corresponde. 
+a. En caso de que no sea un valor entre el 1 y el 7 indica que no se corresponde 
+con ningún día. 
+<br> ";
 $num1 = rand(1,7);
 echo"Dia: $num1 <br>";
 switch ($num1) {

@@ -9,16 +9,16 @@ echo"$num2 <br>";
  $division = $num1 / $num2;
 
  //Respuestas
- echo "La suma de $num1 i $num2 es $suma";
- echo "La resta de $num1 i $num2 es $resta";
- echo "La division de $num1 i $num2 es $division";
+ echo "La suma de $num1 i $num2 es $suma <br>";
+ echo "La resta de $num1 i $num2 es $resta <br>";
+ echo "La division de $num1 i $num2 es $division <br> ";
 
  if ($num1 == $num2) {
-    echo"$num1 i $num2 son iguales";
+    echo"$num1 i $num2 son iguales <br>";
  } else if( $num1 > $num2) {
-    echo "$num1 es mas grande que $num2";
+    echo "$num1 es mas grande que $num2 <br>";
  } else if( $num1 < $num2) {
-    echo "$num2 es mas grande que $num1";
+    echo "$num2 es mas grande que $num1 <br> ";
  }
  /**
   * 3. Si las dos variables son valores superiores a 1,
