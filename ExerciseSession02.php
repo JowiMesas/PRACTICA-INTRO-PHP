@@ -19,7 +19,7 @@ if (!isset($_SESSION['arrayNumeros'])) {
     <h2>Modify array saved in season</h2>
     <br>
     Postion to modify: 
-    <select name="postion">
+    <select name="position">
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
