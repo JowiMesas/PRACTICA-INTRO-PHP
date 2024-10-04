@@ -14,8 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         $_SESSION['arrayNumeros'][$position] = $newValue;
     } else if (isset($_POST['average'])) {
-        $sumaTotal = array_sum($_SESSION['arrayNumeros']);
-        $_SESSION['posAverage'] = number_format($sumaTotal / count($_SESSION['arrayNumeros']), 2);
+        $sumaTotal = array_sum($_SESSION['arrayNumeros']); //Sumar todos los valores del array
+        $_SESSION['posAverage'] = number_format($sumaTotal / count($_SESSION['arrayNumeros']), 2); //calcular la media 
 
     }
 }
