@@ -7,6 +7,18 @@ session_start();
 if (!isset($_SESSION['arrayNumeros'])) {
     $_SESSION['arrayNumeros'] = [10, 20, 30];
 }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["modify"])) {
+        $position = $_POST["position"];
+        $newValue = $_POST["newValue"];
+        
+        $_SESSION['arrayNumeros'][$position] = $newValue;
+    } else if (isset($_POST['average'])) {
+        $sumaTotal = array_sum($_SESSION['arrayNumeros']);
+        $_SESSION['posAverage'] = number_format($sumaTotal / count($_SESSION['arrayNumeros']), 2);
+
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +28,8 @@ if (!isset($_SESSION['arrayNumeros'])) {
     <title>ExerciseSession02</title>
 </head>
 <body>
-    <h2>Modify array saved in season</h2>
+ <form action="" method="post" >
+ <h2>Modify array saved in season</h2>
     <br>
     Postion to modify: 
     <select name="position">
@@ -33,6 +46,12 @@ if (!isset($_SESSION['arrayNumeros'])) {
     <input type="submit" name="average" value="Average" >
     <input type="reset" value="Reset" >
     <br>
-    <p><?php echo implode(", ", $_SESSION['arrayNumeros']); ?></p>
+ </form>
+    <p>Current array: <?php echo implode(", ", $_SESSION['arrayNumeros']); ?></p>
+    <p><?php 
+    if(isset( $_SESSION['posAverage'])) {
+        echo 'Average: '. $_SESSION['posAverage'] .'';
+    }
+    ?></p>
 </body>
 </html>
