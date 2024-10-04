@@ -17,18 +17,20 @@ for ($i = 0; $i < $num1; $i++) {
 }
 echo" <br> <br>  3. Muestra la progresión numérica desde la segunda variable hasta 0 con un bucle
 while. <br>";
-
-while ($num2 >= 0) {
-   echo $num2. " ";
-   $num2--;
+$tempNum2 = $num2;
+while ($tempNum2 >= 0) {
+   echo $tempNum2. " ";
+   $tempNum2--;
 }
 echo "<br> <br> Muestra la progresión numérica desde la primera variable a la segunda con un bucle
 do/while.
  <br> a. Si la segunda variable es más pequeña, sólo queremos que imprima una vez el valor de la primera variable. <br>";
-if ($num1 > $num2) {
+ if ($num2 < $num1) {
    echo $num1;
+} else {
+   do {
+      echo $num1 . " ";
+      $num1++;
+   } while ($num1 <= $num2);
 }
-do {
-echo $num1 . " ";
-$num1++;
-} while ($num1 <= $num2);
+
